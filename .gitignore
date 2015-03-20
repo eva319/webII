@@ -1,0 +1,5 @@
+$more .gitignore  
+Thumbs.db  
+node_modules/
+*.swp
+bower_components/
