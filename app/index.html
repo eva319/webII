@@ -1,360 +1,61 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html ang-app="">
 <head>
-<meta charset="utf-8">
-<title>e速贷|互联网金融创新型平台|p2p网络投资理财|网络贷款|企业融资|e速贷网络借贷平台</title>
-<link rel="stylesheet" type="text/css" href="main.css">
-<link rel="stylesheet" type="text/css" href="common.css">
-<script type="text/javascript" src="js/jquery.js"></script>
-<script type="text/javascript" src="js/slide.js"></script>
+<meta charset="utf-8" />
+    <title>主监控</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimal-ui" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="yes" />
+    <link rel="shortcut icon" href="/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href = "/vender/css/bootstrap.css">
+    <link rel="stylesheet" href = "/vender/css/bootstrap-responsive.css">
+    <link rel="stylesheet" href = "/vender/css/mobile.css">
+
 </head>
 
-<body>
-<div class="top">
-    <div class="topline">
-        <div class="warpper">
-            <div class="outlink">
-                <ul>
-                <li><a href="#" title="微博" class="weibo"><img src="images/weibo.png"></a></li>
-                <li><a href="#" title="微信" class="weibo"><img src="images/weixin.png"></a></li>        
-                <li><img src="images/phone.png"></li>
-                <li><span class="font14px bluedarkfont">400-637-9995</span></li>
-                </ul>
-            </div>
-            <div class="navamall">
-                <ul>
-                <li><a href="#" class="whitefont font12px">a录</a></li>
-                <li><a href="#" class="whitefont font12px">1注册</a></li>
-                <li><a href="#" class="whitefont font12px">社区论坛</a></li>
-                <li class="noimg"><a href="#" class="whitefont font12px">e元商城</a></li>
-                </ul>
-            </div>
-         <br class="spacer">
-        </div>        
-    </div>
-    <div class="topcontent">
-       <div class="warpper topcontent_item">
-        <div class="logo">
-            <a href="#" title="e速贷"><img src="images/logo.png"></a>
-        </div>
-        <div class="nav" id="menu">
-            <ul  id="nav">
-            <li><a href="#" class="font16px">首页</a></li>
-            <li  class="mainlevel" id="mainlevel_01"><a href="#" class="font16px ">投资理财</a>
-               <ul id="sub_01" class="sndnav">
-               <li><a href="#" class="font14px">散标投资列表</a></li>
-               <li><a href="#" class="font14px">理财投资列表</a></li>
-               <br class="spacer">
-               </ul>
-            </li>
-            <li><a href="#" class="font16px">借贷融资</a></li>
-            <li class="noimg"><a href="#" class="font16px">e仔小助手</a></li>
-            </ul>
-    <br class="spacer">
-        </div>
-       </div>
-    <br class="spacer">
-    </div>
-    
-    <br class="spacer">
+  
+<body ng-controller="userController">
+<div class="container-fluid">
+<div class="top">   
+   <span>中贝科技</span>
 </div>
-<div class="maincon">
-    <div class="banner">
-        <div class="swap">
-	<ul id="slider">
-		<li style="background: url(images/banner.png) center center no-repeat #009ee3;" id="myicloud"></li>
-		<li style="background:url(images/banner.png) center center no-repeat #ffcc00;"></li>
-		<li style="background:url(images/banner.png) center center no-repeat #303030;">
-		</li>
-	</ul>
+<div class="mainnav">
+  <ul class="row-fluid">
+    <li class="span3"><a href="#" >进度</a></li>
+    <li class="span3"><a href="#" >安质</a></li>
+    <li class="span3"><a href="#" >效益</a></li>
+    <li class="span3"><a href="#" >用户</a></li>
+  </ul>
 </div>
-<ul id="naviSlider">
-	<li sindex="1" class="on"></li>
-	<li sindex="2"></li>
-	<li sindex="3"></li>
-</ul>
-
-<script type="text/javascript">
-$(document).ready(function(){
-	$("#slider").jSlider({
-			pause:15000,
-			naviSlider:'naviSlider'
-		}
-	);
-				
-})
-</script>
-    </div>
-    <div class="data">
-        <div class="databg"></div>
-        <div class="datadiv">
-            <div class="warpper data_content">
-                <div class="data_content_tit">
-                  <ul>
-                  <li><a href="#" class="whitefont font14px">历史数据</a></li>
-                  <li style="display:none;">昨日数据</li>
-                  </ul>
-                </div>
-                <div class="data_content_item">
-                    <p class="data_content_item_tit"><span class="whitefont font12px">申请总额</span></p>
-                    <p><span class=" whitefont font24px" >26亿6112万元</span></p>
-                </div>
-                <div class="data_content_item">
-                    <p class="data_content_item_tit"><span class="whitefont font12px">成交总额</span></p>
-                    <p><span class=" whitefont font24px" >21亿6112万元</span></p>
-                </div>
-                <div class="data_content_item">
-                    <p class="data_content_item_tit"><span class="whitefont font12px">申请笔数</span></p>
-                    <p><span class=" whitefont font24px" >7.8万笔</span></p>
-                </div>
-                <div class="data_content_item">
-                    <p class="data_content_item_tit"><span class="whitefont font12px">成交笔数</span></p>
-                    <p><span class=" whitefont font24px" >6.8万笔</span></p>
-                </div>
-                <br class="spacer">
-            </div>
-        </div>
-    </div>
-</div>
-<div class="addiv">
-<div class="warpper">
-<img src="images/adII.png">
-<ul>
-<li><img src="images/adIIimgI.png"></li>
-<li><img src="images/adIIimgII.png"></li>
-<li><img src="images/adIIimgIII.png"></li>
-</ul>
-</div>
-</div>
-<div class="container">
-<div class="warpper content_div">
-    <div class="content_div_tit"> <span class="font20px">投资列表</span> </div>
-    <div class="content_div_item">
-        <span class="content_div_item_tit font14px grayfont w220">借款标题</span>
-        <span class="content_div_item_tit font14px grayfont w120">还款方式</span>
-        <span class="content_div_item_tit font14px grayfont w120">年利率</span>
-        <span class="content_div_item_tit font14px grayfont w160 textright">金额</span>
-        <span class="content_div_item_tit font14px grayfont w100">期限</span>
-        <span class="content_div_item_tit font14px grayfont w100">奖励</span>
-        <span class="content_div_item_tit font14px grayfont w100">进度</span>
-        <br class="spacer">
-    </div>
-    <div class="content_div_item">
-        <span class="content_div_item_tit font14px  w220 content_div_item_field">
-        <em class="loantype TJB"></em>
-        <a href="#" class="w180 loantit">短期周转 (续借)</a>
-        </span>
-        
-        <span class="content_div_item_tit content_div_item_field font14px  w120">月还息到期还本</span>
-        <span class="content_div_item_tit content_div_item_field font14px  w120">
-        <a href="#" class="count">21.00%</a>
-        </span>
-        <span class="content_div_item_tit content_div_item_field font14px  w160 textright">￥3,000,000.00</span>
-        <span class="content_div_item_tit content_div_item_field font14px  w100">36个月</span>
-        <span class="content_div_item_tit content_div_item_field font14px  w100">-</span>
-        <span class="content_div_item_tit content_div_item_field font14px  w100">
-        100%
-        </span>
-        <span class="content_div_item_tit content_div_item_field font14px  w100">
-        <a class="ui-button-mid ui-button-blue" href="#">投资</a>
-        </span>
-        <br class="spacer">
-    </div>
-    <div class="content_div_item">
-        <span class="content_div_item_tit font14px  w220 content_div_item_field">
-        <em class="loantype XYB"></em>
-        <a href="#" class="w180 loantit">短期周转 (续借)</a>
-        </span>
-        
-        <span class="content_div_item_tit content_div_item_field font14px  w120">月还息到期还本</span>
-        <span class="content_div_item_tit content_div_item_field font14px  w120">
-        <a href="#" class="count">21.00%</a>
-        </span>
-        <span class="content_div_item_tit content_div_item_field font14px  w160 textright">￥3,000,000.00</span>
-        <span class="content_div_item_tit content_div_item_field font14px  w100">36个月</span>
-        <span class="content_div_item_tit content_div_item_field font14px  w100">0.08%</span>
-        <span class="content_div_item_tit content_div_item_field font14px  w100">
-        100%
-        </span>
-        <span class="content_div_item_tit content_div_item_field font14px  w100">
-        <a class="ui-button-mid ui-button-gray" href="#">投资</a>
-        </span>
-        <br class="spacer">
-    </div>
-    <div class="content_div_item">
-        <span class="content_div_item_tit font14px  w220 content_div_item_field">
-        <em class="loantype XYB"></em>
-        <a href="#" class="w180 loantit">短期周转 (续借)</a>
-        </span>
-        
-        <span class="content_div_item_tit content_div_item_field font14px  w120">月还息到期还本</span>
-        <span class="content_div_item_tit content_div_item_field font14px  w120">
-        <a href="#" class="count">21.00%</a>
-        </span>
-        <span class="content_div_item_tit content_div_item_field font14px  w160 textright">￥3,000,000.00</span>
-        <span class="content_div_item_tit content_div_item_field font14px  w100">36个月</span>
-        <span class="content_div_item_tit content_div_item_field font14px  w100">0.08%</span>
-        <span class="content_div_item_tit content_div_item_field font14px  w100">
-        100%
-        </span>
-        <span class="content_div_item_tit content_div_item_field font14px  w100">
-        <a class="ui-button-mid ui-button-blue" href="#">投资</a>
-        </span>
-    <br class="spacer">
-    </div>
-    <div class="more"><a href="#" class="font14px grayfont">查看更多项目</a></div>
-</div>
-    <div class="news warpper">
-        <div class="news_content_div pad15px">
-        <img src="images/img.png">
-        <a href="#" class="font16px tita blackfont">本周六e速贷约你面对面</a>
-        <p><a href="#" class="font14px cona">南国炎热的夏天来了，广东汇融投资股份公司、团市委和市经信局共同主办的青年电商...</a></p>
-        </div>
-        <div class="news_content_div pad15px" >
-        <img src="images/img.png">
-        <a href="#" class="font16px tita blackfont">本周六e速贷约你面对面</a>
-        <p><a href="#" class="font14px cona">南国炎热的夏天来了，广东汇融投资股份公司、团市委和市经信局共同主办的青年电商...</a></p>
-        </div>
-        <div class="news_content_div">
-        <img src="images/img.png">
-        <a href="#" class="font16px tita blackfont">本周六e速贷约你面对面</a>
-        <p><a href="#" class="font14px cona">南国炎热的夏天来了，广东汇融投资股份公司、团市委和市经信局共同主办的青年电商...</a></p>
-        </div>
-    <br class="spacer">
-        <div class="more"><a href="#" class="font14px grayfont">查看更多新闻</a></div>
-    
-    </div>
-<div class="content_div warpper">
-<div class="div_float w640 pad20px">
-    <div class="content_div_tit"> <span class="font20px">最新公告</span> </div>
-    <div class="content_div_con">
-    <div class="notice_time div_float">
-    <span class="grayfont font24px dayspan">12</span>
-    <span class="grayfont font18px monthspan textright">08</span>
-    </div>
-    <div class="article_item div_float">
-    <p class="article_item_tit textleft"><a href="#" class="font16px blackfont">标题</a></p>
-    <p class="article_item_con textleft"><a href="#" class="font14px">内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容</a> </p>
-    </div>
-    <br class="spacer">
-    </div>
-    <div class="content_div_con">
-    <div class="notice_time div_float">
-    <span class="grayfont font24px dayspan">12</span>
-    <span class="grayfont font18px monthspan textright">08</span>
-    </div>
-    <div class="article_item div_float">
-    <p class="article_item_tit textleft"><a href="#" class="font16px blackfont">标题</a></p>
-    <p class="article_item_con textleft"><a href="#" class="font14px">内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容</a> </p>
-    </div>
-    <br class="spacer">
-    </div>
-<br class="spacer">
-    <div class="more"><a href="#" class="font14px grayfont">查看更多公告</a></div>
-</div>
-<div class="div_float w360">
-    <div class="content_div_tit"> <span class="font20px">最新论坛动态</span> </div>
-<div class="ul_div">
-<ul>
-<li><a href="#" class="font16px ul_div_a">标题标题标题标题</a><span class="timespan font12px grayfont">17-12</span></li>
-<li><a href="#" class="font16px ul_div_a">标题标题标题标题</a><span class="timespan font12px grayfont">17-12</span></li>
-<li><a href="#" class="font16px ul_div_a">标题标题标题标题</a><span class="timespan font12px grayfont">17-12</span></li>
-<li><a href="#" class="font16px ul_div_a">标题标题标题标题</a><span class="timespan font12px grayfont">17-12</span></li>
-<li><a href="#" class="font16px ul_div_a">标题标题标题标题</a><span class="timespan font12px grayfont">17-12</span></li>
-<br class="spacer">
-</ul>
-</div>
-<br class="spacer">
-    <div class="more"><a href="#" class="font14px grayfont">查看更多动态</a></div>
-</div>
-<br class="spacer">
-</div>
-</div>
-<div class="addivII">
-<div class="warpper addivII_content">
-<div class="resigner"><span class="font14px">已有</span><span class="font60px blackfont fontbold">365248</span><span class="font14px">注册</span> </div>
-<div class="resignment"><a href="#" class="font18px whitefont ui-button-max">立即体验</a></div>
-</div>
-</div>
-<div class="footer">
-<div class="darkfoot">
-<div class="warpper">
-<div class="div_float w700 pad20px">
-<div class="talk"><img src="images/talk.png"></div>
-<div class="foot_item">
-<ul>
-<li><span class="font16px grayfont pad20px ui-footer-tit">媒体报道</span></li>
-<li><a class="ui-footer-img-link HZ" target="_blank" href="#"> 工</a></li>
-<li><a class="ui-footer-img-link GZ" target="_blank" href="#"> 工</a></li>
-<li><a class="ui-footer-img-link TX" target="_blank" href="#"> 工</a></li>
-<li><a class="ui-footer-img-link XL" target="_blank" href="#"> 工</a></li>
-<li><a class="ui-footer-img-link HX" target="_blank" href="#"> 工</a></li>
-<li><a class="ui-footer-img-link FH" target="_blank" href="#"> 工</a></li>
-</ul>
-<br class="spacer">
-</div>
-<div class="foot_item">
-<ul>
-<li><span class="font16px grayfont pad20px ui-footer-tit">公司地址</span></li>
-<li><span class="font16px grayfont pad20px ui-footer-tit">广东省惠州市文明一路中信城市时代B座1201-1202室</span></li>
-<br class="spacer">
-</ul>
-</div>
-<div class="foot_item">
-<ul>
-<li><span class="font16px grayfont pad20px ui-footer-tit">公司电话</span></li>
-<li><span class="font16px grayfont pad20px ui-footer-tit textleft">0752-5710598</span></li>
-<br class="spacer">
-</ul>
-</div>
-<div class="foot_item">
-<ul>
-<li><span class="font16px grayfont pad20px ui-footer-tit">传真电话</span></li>
-<li><span class="font16px grayfont pad20px ui-footer-tit textleft">0752-5710599</span></li>
-<br class="spacer">
-</ul>
-</div>
-<div class="foot_item">
-<ul>
-<li><a class="ui-footer-verification-item credibility" target="_blank" href="#"> 工</a></li>
-<li><a class="ui-footer-verification-item itrust" target="_blank" href="#"> 工</a></li>
-<li><a class="ui-footer-verification-item trust" target="_blank" href="#"> 工</a></li>
-<li><a class="ui-footer-verification-item" target="_blank" href="#"> 工</a></li>
-<li><a class="ui-footer-verification-item" target="_blank" href="#"> 工</a></li>
-<li><a class="ui-footer-verification-item" target="_blank" href="#"> 工</a></li>
-</ul>
-<br class="spacer">
-</div>
-</div>
-<div class="div_float w300 ui-footer-right">
-<div class="ui-footer-right-item phone textright"><em class="phoneicorn div_float"></em><span class="font30px ">400-637-9995</span><br class="spacer"></div>
-<div class="ui-footer-right-item "><span class="font24px ">周一至周五 08：30-18：00</span></div>
-<div class="ui-footer-right-item ">
-<ul>
-<li class="pad50px"><a class="ui-footer-social-item weibo" target="_blank" href="#"> 工</a></li>
-<li class="pad50px"><a class="ui-footer-social-item weixin" target="_blank" href="#"> 工</a></li>
-<li><a class="ui-footer-social-item qq" target="_blank" href="#"> 工</a></li>
-<br class="spacer">
-</ul>
-</div>
-<div class="ui-footer-right-item ">
-<ul>
-<li class="pad30px"><a class="ui-footer-social-itemI weixinI" target="_blank" href="#"> 工</a><span class="font14px">服务号</span></li>
-<li><a class="ui-footer-social-itemI weixinII" target="_blank" href="#"> 工</a><span class="font14px">公纵号</span></li>
-</ul>
-<br class="spacer">
-</div>
+<div class="contentnav">
+  <ul>
+    <li>
+      <a href="#">
+       <img src="">
+       <span>主监控</span>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+       <img src="">
+       <span>导向系统</span>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+       <img src="">
+       <span>还数据</span>
+      </a>
+    </li>
+  </ul>
 </div>
 </div>
 
-<br class="spacer">
-</div>
-<div class="lightfoot">
-<div class="warpper">
-<p><a href="#" class="font14px grayfont">企业QQ在线</a>-<a href="#" class="font14px grayfont">可信网站</a>-<a href="#" class="font14px grayfont">中国互联网联盟</a>-<a href="#" class="font14px grayfont">P2P借贷信息网</a>-<a href="#" class="font14px grayfont">网贷天眼</a>-<a href="#" class="font14px grayfont">网贷之家</a>-<a href="#" class="font14px grayfont">站长统计</a></p>
-<p><span class="font14px grayfont">Copyright © 2014 All Rights Reserved 广东汇融投资股份公司版权所有 粤ICP备10231372号</span></p>
-</div>
-</div>
-</div>
+<!-- jQuery (Bootstrap 的 JavaScript 插件需要引入 jQuery) -->
+<script src="/vender/js/jquery.min.js"></script>
+<script src= "/vender/js/angular.min.js"></script>
+<script src= "/vender/js/bootstrap.min.js"></script>
 </body>
 </html>
+			

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html ang-app="">
+<head>
+<meta charset="utf-8" />
+    <title>主监控</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimal-ui" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="yes" />
+    <link rel="shortcut icon" href="/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href = "/vender/css/bootstrap.min.css">
+
+</head>
+
+  
+<body ng-controller="userController">
+<div class="container">
+<div class="topnav">
+   <a href="#" class="topnav-left-a">
+     <span class="topnav-left topnavicorn"></span>
+   </a>
+   <span>主监控</span>
+</div>
+<div class="selectbar">
+  <label>当前盾构机</label>
+  <div class="btn-group">
+   <button type="button" class="btn btn-default">穿山甲</button>
+   <button type="button" class="btn btn-default dropdown-toggle" 
+      data-toggle="dropdown">
+      <span class="caret"></span>
+      <span class="sr-only">穿山甲</span>
+   </button>
+   <ul class="dropdown-menu" role="menu">
+      <li><a href="#">穿山甲</a></li>
+      <li><a href="#">穿山甲</a></li>
+      <li><a href="#">穿山甲</a></li>
+      <li><a href="#">穿山甲</a></li>
+   </ul>
+</div>
+<div class="maincontent-data">   
+<div class="row">
+        <div class="col-md-4">col-md-4</div>
+        <div class="col-md-4">col-md-4</div>
+        <div class="col-md-4">col-md-4</div>
+</div>
+</div>
+</div>
+<span>刀盘信息</span>
+<div class="content-data"></div>
+<span>土压数据</span>
+<div class="content-data"></div>
+<span>油缸行程</span>
+<div class="content-data"></div>
+<span>油缸压力</span>
+<div class="content-data"></div>
+<span>螺机数据</span>
+<div class="content-data"></div>
+</div>
+<div class="content-data"></div>
+
+</div>
+<div class="container">
+
+<h3>用户列表</h3>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>编辑</th>
+      <th>名</th>
+      <th>姓</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="user in users">
+      <td>
+        <button class="btn" ng-click="editUser(user.id)">
+          <span class="glyphicon glyphicon-pencil"></span>编辑
+        </button>
+      </td>
+      <td>{{ user.fName }}</td>
+      <td>{{ user.lName }}</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr>
+<button class="btn btn-success" ng-click="editUser('new')">
+<span class="glyphicon glyphicon-user"></span>创建新用户
+</button>
+<hr>
+
+<h3 ng-show="edit">创建新用户:</h3>
+<h3 ng-hide="edit">编辑用户:</h3>
+
+<form class="form-horizontal">
+  <div class="form-group">
+    <label class="col-sm-2 control-label">名:</label>
+    <div class="col-sm-10">
+    <input type="text" ng-model="fName" ng-disabled="!edit" placeholder="名">
+    </div>
+  </div> 
+  <div class="form-group">
+    <label class="col-sm-2 control-label">姓:</label>
+    <div class="col-sm-10">
+    <input type="text" ng-model="lName" ng-disabled="!edit" placeholder="姓">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-sm-2 control-label">密码:</label>
+    <div class="col-sm-10">
+    <input type="password" ng-model="passw1" placeholder="密码">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-sm-2 control-label">重复密码:</label>
+    <div class="col-sm-10">
+    <input type="password" ng-model="passw2" placeholder="重复密码">
+    </div>
+  </div>
+</form>
+
+<hr>
+<button class="btn btn-success" ng-disabled="error || incomplete">
+<span class="glyphicon glyphicon-save"></span>  保存修改
+</button>
+
+</div>
+
+<!-- jQuery (Bootstrap 的 JavaScript 插件需要引入 jQuery) -->
+<script src="/vender/js/jquery.min.js"></script>
+<script src= "/vender/js/angular.min.js"></script>
+<script src= "/vender/js/bootstrap.min.js"></script>
+</body>
+</html>
+			
