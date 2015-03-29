@@ -914,6 +914,8 @@
   input[type="radio"] {
     border: 1px solid #ccc;
   }
+  .content-bg .navbar-right{float: right!important;
+  margin-right: 0px;}
   .form-horizontal .control-label {
     float: none;
     width: auto;
@@ -970,8 +972,7 @@
     float: left;
     width: 100%;
     min-height: 40px;
-    margin-left: 0;background: #3498db;
-    border-top: #8dcdef solid 1px;
+    margin-left: 0;
     *margin-left: 0;
     -webkit-box-sizing: border-box;
        -moz-box-sizing: border-box;

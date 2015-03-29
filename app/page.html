@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ang-app="">
+<html ang-app="" lang="en">
 <head>
 <meta charset="utf-8" />
     <title>主监控</title>
@@ -8,123 +8,111 @@
     <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimal-ui" />
     <meta name="apple-mobile-web-app-status-bar-style" content="yes" />
     <link rel="shortcut icon" href="/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href = "/vender/css/bootstrap-responsive.css">
     <link rel="stylesheet" href = "/vender/css/bootstrap.min.css">
+    <link rel="stylesheet" href = "/vender/css/mobile.css">
 
 </head>
 
   
 <body ng-controller="userController">
-<div class="container">
-<div class="topnav">
-   <a href="#" class="topnav-left-a">
-     <span class="topnav-left topnavicorn"></span>
-   </a>
-   <span>主监控</span>
+<div class="container-fluid">
+<div class="top row-fluid">   
+  
+   <div  class="span12"> 
+   <a href="#" class="span2 topimg"><img src="/images/prev-x.png"></a>
+   <span class="span8">主监控</span></div>
 </div>
-<div class="selectbar">
-  <label>当前盾构机</label>
-  <div class="btn-group">
-   <button type="button" class="btn btn-default">穿山甲</button>
-   <button type="button" class="btn btn-default dropdown-toggle" 
-      data-toggle="dropdown">
-      <span class="caret"></span>
-      <span class="sr-only">穿山甲</span>
-   </button>
-   <ul class="dropdown-menu" role="menu">
-      <li><a href="#">穿山甲</a></li>
-      <li><a href="#">穿山甲</a></li>
-      <li><a href="#">穿山甲</a></li>
-      <li><a href="#">穿山甲</a></li>
-   </ul>
-</div>
-<div class="maincontent-data">   
-<div class="row">
-        <div class="col-md-4">col-md-4</div>
-        <div class="col-md-4">col-md-4</div>
-        <div class="col-md-4">col-md-4</div>
-</div>
-</div>
-</div>
-<span>刀盘信息</span>
-<div class="content-data"></div>
-<span>土压数据</span>
-<div class="content-data"></div>
-<span>油缸行程</span>
-<div class="content-data"></div>
-<span>油缸压力</span>
-<div class="content-data"></div>
-<span>螺机数据</span>
-<div class="content-data"></div>
-</div>
-<div class="content-data"></div>
 
+<div class="contentnav">
+  <div class="navbar-inner  content-bg">
+  <div class="row">
+     <span class="col-xs-4 content-span">当前盾构机:</span>
+       <div class="col-xs-6">
+        <select class="form-control"  placeholder=".col-xs-2">
+          <option>穿山甲</option>
+          <option>穿山甲2</option>
+          <option>穿山甲3</option>
+          <option>穿山甲4</option>
+          <option>穿山甲5</option>
+        </select>
+  </div>     
+  </div>
+      </div>
 </div>
-<div class="container">
-
-<h3>用户列表</h3>
-
-<table class="table table-striped">
-  <thead>
-    <tr>
-      <th>编辑</th>
-      <th>名</th>
-      <th>姓</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr ng-repeat="user in users">
-      <td>
-        <button class="btn" ng-click="editUser(user.id)">
-          <span class="glyphicon glyphicon-pencil"></span>编辑
-        </button>
-      </td>
-      <td>{{ user.fName }}</td>
-      <td>{{ user.lName }}</td>
-    </tr>
-  </tbody>
-</table>
-
-<hr>
-<button class="btn btn-success" ng-click="editUser('new')">
-<span class="glyphicon glyphicon-user"></span>创建新用户
-</button>
-<hr>
-
-<h3 ng-show="edit">创建新用户:</h3>
-<h3 ng-hide="edit">编辑用户:</h3>
-
-<form class="form-horizontal">
-  <div class="form-group">
-    <label class="col-sm-2 control-label">名:</label>
-    <div class="col-sm-10">
-    <input type="text" ng-model="fName" ng-disabled="!edit" placeholder="名">
-    </div>
-  </div> 
-  <div class="form-group">
-    <label class="col-sm-2 control-label">姓:</label>
-    <div class="col-sm-10">
-    <input type="text" ng-model="lName" ng-disabled="!edit" placeholder="姓">
+<div class="content">
+  <div class="content-bg">
+    <div class="row">
+      <div class="col-xs-4">
+        <h2 class="bluefont ">1999</h2>
+        <p class="navbar-left">当前环号</p>
+      </div>
+      <div class="col-xs-4">
+        <h2 class="bluefont">拼接</h2>
+        <p class="navbar-left">当前状态</p>
+      </div>
+      <div class="col-xs-4">        
+        <h2 class="bluefont">60<small class="bluefont">min</small></h2>
+        <p class="navbar-left">持续时长</p>
+      </div>
+      <div class="col-xs-12 content-span content-border-top">
+         上位机时间<span class="navbar-right">2014-05-12 12:35:00</span>
+      </div> 
     </div>
   </div>
-  <div class="form-group">
-    <label class="col-sm-2 control-label">密码:</label>
-    <div class="col-sm-10">
-    <input type="password" ng-model="passw1" placeholder="密码">
-    </div>
-  </div>
-  <div class="form-group">
-    <label class="col-sm-2 control-label">重复密码:</label>
-    <div class="col-sm-10">
-    <input type="password" ng-model="passw2" placeholder="重复密码">
-    </div>
-  </div>
-</form>
+</div>
+<div class="content">
+   <div class="row"><div class="col-xs-12 content-span-center">刀盘信息</div></div>
+   <div class="content-bg">
+    <div class="row">
+      <div class="col-xs-6"> 
+        <h4 class="blackfont"> 2522.56</h4>
+        <p class="navbar-left">刀盘扭矩</p>
+      </div>
+      <div class="col-xs-6 content-span-right"> 
+        <h4 class="blackfont "> 2522.56</h4>
+        <p class="navbar-right">推进速度</p>
+      </div>
 
-<hr>
-<button class="btn btn-success" ng-disabled="error || incomplete">
-<span class="glyphicon glyphicon-save"></span>  保存修改
-</button>
-
+      <div class="col-xs-6 content-border-top"> 
+        <h4 class="blackfont"> 2522.56</h4>
+        <p class="navbar-left">刀盘转速</p>
+      </div>
+      <div class="col-xs-6 content-span-right content-border-top"> 
+        <h4 class="blackfont "> 2522.56</h4>
+        <p class="navbar-right">总推力</p>
+      </div>
+    </div>
+   </div>
+</div>
+<div class="content">
+   <div class="row"><div class="col-xs-12 content-span-center">土压数据</div></div>
+   <div class="content-bg content-relative">
+    <div class="row">
+      <div class="col-xs-6"> 
+        <h4 class="blackfont">5333.50</h4>
+        <p class="navbar-left">左上土压</p>
+      </div>
+      <div class="col-xs-6 content-span-right"> 
+        <h4 class="blackfont ">5333.50</h4>
+        <p class="navbar-right">右上土压</p>
+      </div>
+      
+      <div class="col-xs-6 content-border-top"> 
+        <h4 class="blackfont">5333.50</h4>
+        <p class="navbar-left">左下土压</p>
+      </div>
+      <div class="col-xs-6 content-span-right content-border-top"> 
+        <h4 class="blackfont "> 5333.50</h4>
+        <p class="navbar-right">右下土压</p>
+      </div>
+      <div class=" content-center content-absolute-center">
+        <h4 class="blackfont content-data-center"> 5333.50</h4>
+        <p class="content-data-center">右下土压</p>
+      </div> 
+    </div>
+   </div>
+</div>
 </div>
 
 <!-- jQuery (Bootstrap 的 JavaScript 插件需要引入 jQuery) -->
@@ -133,4 +121,4 @@
 <script src= "/vender/js/bootstrap.min.js"></script>
 </body>
 </html>
-			
+      
