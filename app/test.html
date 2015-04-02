@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="myTodoApp" lang="en">
+<html ang-app="" lang="en">
 <head>
 <meta charset="utf-8" />
     <title>主监控</title>
@@ -15,7 +15,7 @@
 </head>
 
   
-<body  ng-controller="MainMonitorSystemCtrl">
+<body ng-app="" ng-controller="customersController">
 <div class="container-fluid">
 <div class="top row-fluid">   
   
@@ -40,7 +40,7 @@
   </div>
       </div>
 </div>
-<div class="content">
+<div class="content"  >
   <div class="content-bg">
     <div class="row">
       <div class="col-xs-4">
@@ -52,11 +52,11 @@
         <p class="navbar-left">当前状态</p>
       </div>
       <div class="col-xs-4">        
-        <h2 class="bluefont">60<small class="bluefont">min</small></h2>
+        <h2 class="bluefont">60<small ng-class="bluefont">min</small></h2>
         <p class="navbar-left">持续时长</p>
       </div>
       <div class="col-xs-12 content-span content-border-top">
-         上位机时间<span class="navbar-right">2014-05-12 12:35:00</span>
+         上位机时间<span class="navbar-right">{{bodys.time}}</span>
       </div> 
     </div>
   </div>
@@ -66,20 +66,20 @@
    <div class="content-bg">
     <div class="row">
       <div class="col-xs-6"> 
-        <h4 class="blackfont"> 2522.56</h4>
+        <h4 class="blackfont">{{bodys.cutter_torque}}</h4>
         <p class="navbar-left">刀盘扭矩</p>
       </div>
       <div class="col-xs-6 content-span-right"> 
-        <h4 class="blackfont "> 2522.56</h4>
+        <h4 class="blackfont "> {{bodys.forward_speed}}</h4>
         <p class="navbar-right">推进速度</p>
       </div>
 
       <div class="col-xs-6 content-border-top"> 
-        <h4 class="blackfont"> 2522.56</h4>
+        <h4 class="blackfont"> {{bodys.cutter_speed}}</h4>
         <p class="navbar-left">刀盘转速</p>
       </div>
       <div class="col-xs-6 content-span-right content-border-top"> 
-        <h4 class="blackfont "> 2522.56</h4>
+        <h4 class="blackfont "> {{bodys.total_propulsion}}</h4>
         <p class="navbar-right">总推力</p>
       </div>
     </div>
@@ -90,25 +90,25 @@
    <div class="content-bg content-relative">
     <div class="row">
       <div class="col-xs-6"> 
-        <h4 class="blackfont">5333.50</h4>
+        <h4 class="blackfont">{{bodys.earth_pressure_left_up}}</h4>
         <p class="navbar-left">左上土压</p>
       </div>
       <div class="col-xs-6 content-span-right"> 
-        <h4 class="blackfont ">5333.50</h4>
+        <h4 class="blackfont ">{{bodys.earth_pressure_right_up}}</h4>
         <p class="navbar-right">右上土压</p>
       </div>
       
       <div class="col-xs-6 content-border-top"> 
-        <h4 class="blackfont">5333.50</h4>
+        <h4 class="blackfont">{{bodys.earth_pressure_left_down}}</h4>
         <p class="navbar-left">左下土压</p>
       </div>
       <div class="col-xs-6 content-span-right content-border-top"> 
-        <h4 class="blackfont "> 5333.50</h4>
+        <h4 class="blackfont "> {{bodys.earth_pressure_right_down}}</h4>
         <p class="navbar-right">右下土压</p>
       </div>
       <div class=" content-center content-absolute-center">
-        <h4 class="blackfont content-data-center"> 5333.50</h4>
-        <p class="content-data-center">右下土压</p>
+        <h4 class="blackfont content-data-center"> {{bodys.earth_pressure_up}}</h4>
+        <p class="content-data-center">上部土压</p>
       </div> 
     </div>
    </div>
@@ -118,25 +118,25 @@
    <div class="content-bg content-relative">
     <div class="row">
       <div class="col-xs-6"> 
-        <h4 class="blackfont">5333.50</h4>
+        <h4 class="blackfont">{{bodys.earth_pressure_left_up}}</h4>
         <p class="navbar-left">左上土压</p>
       </div>
       <div class="col-xs-6 content-span-right"> 
-        <h4 class="blackfont ">5333.50</h4>
+        <h4 class="blackfont ">{{bodys.earth_pressure_right_up}}</h4>
         <p class="navbar-right">右上土压</p>
       </div>
       
       <div class="col-xs-6 content-border-top"> 
-        <h4 class="blackfont">5333.50</h4>
+        <h4 class="blackfont">{{bodys.earth_pressure_left_down}}</h4>
         <p class="navbar-left">左下土压</p>
       </div>
       <div class="col-xs-6 content-span-right content-border-top"> 
-        <h4 class="blackfont "> 5333.50</h4>
+        <h4 class="blackfont "> {{bodys.earth_pressure_right_down}}</h4>
         <p class="navbar-right">右下土压</p>
       </div>
       <div class=" content-center content-absolute-center">
-        <h4 class="blackfont content-data-center"> 5333.50</h4>
-        <p class="content-data-center">右下土压</p>
+        <h4 class="blackfont content-data-center"> {{bodys.earth_pressure_up}}</h4>
+        <p class="content-data-center">上部土压</p>
       </div> 
     </div>
    </div>
@@ -146,20 +146,20 @@
    <div class="content-bg ">
     <div class="row">
       <div class="col-xs-6"> 
-        <h4 class="blackfont">5333.50</h4>
+        <h4 class="blackfont">{{bodys.front_pressure}}</h4>
         <p class="navbar-left">前部压力</p>
       </div>
       <div class="col-xs-6 content-span-right"> 
-        <h4 class="blackfont ">5333.50</h4>
+        <h4 class="blackfont ">{{bodys.tail_pressure}}</h4>
         <p class="navbar-right">后部压力</p>
       </div>
       
       <div class="col-xs-6 content-border-top"> 
-        <h4 class="blackfont">5333.50</h4>
+        <h4 class="blackfont">{{bodys.screw_machine_speed}}</h4>
         <p class="navbar-left">转速</p>
       </div>
       <div class="col-xs-6 content-span-right content-border-top"> 
-        <h4 class="blackfont "> 5333.50</h4>
+        <h4 class="blackfont ">{{bodys.screw_machine_torque}}</h4>
         <p class="navbar-right">扭矩</p>
       </div>
      
@@ -168,13 +168,33 @@
 </div>
 </div>
 
+
+<!--
+<div ng-app="" ng-controller="customersController"> 
+
+<ul>
+   <li>
+   {{heads.ret_code}}
+    {{ heads.ret_code + ', ' + bodys.time }}
+     {{ heads.ret_info + ', ' + bodys.gear_oil_pressure }}
+  </li>
+</ul>
+
+</div>-->
 <!-- jQuery (Bootstrap 的 JavaScript 插件需要引入 jQuery) -->
 <!--<script src="/vender/js/jquery.min.js"></script>-->
 <!--<script src= "/vender/js/angular.min.js"></script>-->
 <script src="http://apps.bdimg.com/libs/angular.js/1.2.15/angular.min.js"></script>
 <!--<script src= "/vender/js/bootstrap.min.js"></script>-->
-<script src="app.js"></script>
-<script src="./controllers/MainMonitorSystemCtrl.js"></script>
 </body>
 </html>
+
+<script>
+
+    function customersController($scope, $http) {
+        $http.get("main_monitor_system.json")
+  .success(function (response) { $scope.heads = response.head; $scope.bodys = response.body; });
+    }
+
+ </script> 
       
