@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html ang-app="" lang="en">
+﻿<!DOCTYPE html>
+<html ng-app="" lang="en">
 <head>
 <meta charset="utf-8" />
     <title>主监控</title>
@@ -11,43 +11,37 @@
     <link rel="stylesheet" href = "/vender/css/bootstrap-responsive.css">
     <link rel="stylesheet" href = "/vender/css/bootstrap.min.css">
     <link rel="stylesheet" href = "/vender/css/mobile.css">
-    <style type="text/css">
-        .ng- {
-        }
-    </style>
 
 </head>
-
-  
-<body ng-controller="userController">
+<body ng-controller="MainIndexController">
 <div class="container-fluid">
-<div class="top row-fluid">
+<div class="top row-fluid">   
    <span class="span12">中贝科技</span>
 </div>
 <div class="mainnav">
   <div class="row-fluid">
     <div class="span3 onmainnav"><a href="#" >进度</a></div>
-    <div class="span3"><a href="#" >安质</a></div>
+    <div class="span3"><a href="/views/Anzhi/index.html" >安质</a></div>
     <div class="span3"><a href="#" >效益</a></div>
     <div class="span3"><a href="#" >用户</a></div>
-  </div>
+  </div> 
 </div>
 <div class="contentnav">
   <ul class="navbar-static">
-    <li>
+    <li ng-click="PageJump('views/Progress/Monitor.html')">
       <a href="#"  class="navbar-inner">
        <img src="/images/icorn1-x.png">
        <span class=" ">主监控</span>
       </a>
     </li>
-    <li>
+    <li ng-click="PageJump('#')">
       <a href="#"  class="navbar-inner">
       <img src="/images/icorn2-x.png">
        <span class=" ">导向系统</span>
       </a>
     </li>
-    <li>
-      <a href="#"  class="navbar-inner ">
+    <li ng-click="PageJump('views/Progress/Ringdata.html')">
+      <a href="#"  class="navbar-inner">
       <img src="/images/icorn3-x.png">
        <span class=" ">环数据</span>
       </a>
@@ -64,9 +58,20 @@
 </div>
 
 <!-- jQuery (Bootstrap 的 JavaScript 插件需要引入 jQuery) -->
+<script src="/vender/js/jquery.min.js"></script>
 <script src= "/vender/js/angular.min.js"></script>
 <script src= "/vender/js/bootstrap.min.js"></script>
-<script src= "/vender/js/jQuery.min.js"></script>
 </body>
 </html>
+<script>
+
+ function MainIndexController($scope) {
+      //跳转方法
+   $scope.PageJump = function(PageUrl) {
+       location.href=PageUrl;
+    }
+  
+   }
+
+</script>
 			

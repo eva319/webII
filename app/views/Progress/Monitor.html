@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html ang-app="" lang="en">
+<head>
+<meta charset="utf-8" />
+    <title>中贝科技</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimal-ui" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="yes" />
+    <link rel="shortcut icon" href="/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href = "/mobile/app/vender/css/bootstrap-responsive.css">
+    <link rel="stylesheet" href = "/mobile/app/vender/css/bootstrap.min.css">
+    <link rel="stylesheet" href = "/mobile/app/vender/css/mobile.css">
+
+</head>
+
+  
+<body ng-controller="userController">
+<div class="container-fluid">
+<div class="top row-fluid">   
+  
+   <div  class="span12">
+   <a href="/mobile/app/index.html" class="span2 topimg"><img src="/mobile/app/images/icorn1-2x-white.png" width="32"></a>
+   <a href="/mobile/app/index.html" class="span8 textleft"><span class=" ">主监控</span></a></div>
+</div>
+
+<div class="contentnav">
+  <div class="navbar-inner  content-bg">
+  <div class="row">
+     <span class="col-xs-4 content-span">当前盾构机:</span>
+       <div class="col-xs-6">
+        <select class="form-control"  placeholder=".col-xs-2">
+          <option>穿山甲</option>
+          <option>穿山甲2</option>
+          <option>穿山甲3</option>
+          <option>穿山甲4</option>
+          <option>穿山甲5</option>
+        </select>
+  </div>     
+  </div>
+      </div>
+</div>
+<div class="content">
+  <div class="content-bg">
+    <div class="row">
+      <div class="col-xs-4">
+        <h2 class="bluefont ">1999</h2>
+        <p class="navbar-left">当前环号</p>
+      </div>
+      <div class="col-xs-4">
+        <h2 class="bluefont">拼接</h2>
+        <p class="navbar-left">当前状态</p>
+      </div>
+      <div class="col-xs-4">        
+        <h2 class="bluefont">60<small class="bluefont">min</small></h2>
+        <p class="navbar-left">持续时长</p>
+      </div>
+      <div class="col-xs-12 content-span content-border-top">
+         上位机时间<span class="navbar-right">2014-05-12 12:35:00</span>
+      </div> 
+    </div>
+  </div>
+</div>
+<div class="content">
+   <div class="row"><div class="col-xs-12 content-span-center">刀盘信息</div></div>
+   <div class="content-bg">
+    <div class="row">
+      <div class="col-xs-6"> 
+        <h4 class="bluefont"> 2522.56</h4>
+        <p class="navbar-left">刀盘扭矩</p>
+      </div>
+      <div class="col-xs-6 content-span-right"> 
+        <h4 class="bluefont "> 2522.56</h4>
+        <p class="navbar-right">推进速度</p>
+      </div>
+
+      <div class="col-xs-6 content-border-top"> 
+        <h4 class="bluefont"> 2522.56</h4>
+        <p class="navbar-left">刀盘转速</p>
+      </div>
+      <div class="col-xs-6 content-span-right content-border-top"> 
+        <h4 class="bluefont "> 2522.56</h4>
+        <p class="navbar-right">总推力</p>
+      </div>
+    </div>
+   </div>
+</div>
+<div class="content">
+   <div class="row"><div class="col-xs-12 content-span-center">土压数据</div></div>
+   <div class="content-bg content-relative">
+    <div class="row">
+      <div class="col-xs-6"> 
+        <h4 class="bluefont">5333.50</h4>
+        <p class="navbar-left">左上土压</p>
+      </div>
+      <div class="col-xs-6 content-span-right"> 
+        <h4 class="bluefont ">5333.50</h4>
+        <p class="navbar-right">右上土压</p>
+      </div>
+      
+      <div class="col-xs-6 content-border-top"> 
+        <h4 class="bluefont">5333.50</h4>
+        <p class="navbar-left">左下土压</p>
+      </div>
+      <div class="col-xs-6 content-span-right content-border-top"> 
+        <h4 class="bluefont "> 5333.50</h4>
+        <p class="navbar-right">右下土压</p>
+      </div>
+      <div class=" content-center content-absolute-center">
+        <h4 class="bluefont content-data-center"> 5333.50</h4>
+        <p class="content-data-center">右下土压</p>
+      </div> 
+    </div>
+   </div>
+</div>
+<div class="content">
+   <div class="row"><div class="col-xs-12 content-span-center">油缸行程</div></div>
+   <div class="content-bg content-relative">
+    <div class="row">
+      <div class="col-xs-6"> 
+        <h4 class="bluefont">5333.50</h4>
+        <p class="navbar-left">左上土压</p>
+      </div>
+      <div class="col-xs-6 content-span-right"> 
+        <h4 class="bluefont ">5333.50</h4>
+        <p class="navbar-right">右上土压</p>
+      </div>
+      
+      <div class="col-xs-6 content-border-top"> 
+        <h4 class="bluefont">5333.50</h4>
+        <p class="navbar-left">左下土压</p>
+      </div>
+      <div class="col-xs-6 content-span-right content-border-top"> 
+        <h4 class="bluefont "> 5333.50</h4>
+        <p class="navbar-right">右下土压</p>
+      </div>
+      <div class=" content-center content-absolute-center">
+        <h4 class="bluefont content-data-center"> 5333.50</h4>
+        <p class="content-data-center">右下土压</p>
+      </div> 
+    </div>
+   </div>
+</div>
+<div class="content">
+   <div class="row"><div class="col-xs-12 content-span-center">螺机数据</div></div>
+   <div class="content-bg ">
+    <div class="row">
+      <div class="col-xs-6"> 
+        <h4 class="bluefont">5333.50</h4>
+        <p class="navbar-left">前部压力</p>
+      </div>
+      <div class="col-xs-6 content-span-right"> 
+        <h4 class="bluefont ">5333.50</h4>
+        <p class="navbar-right">后部压力</p>
+      </div>
+      
+      <div class="col-xs-6 content-border-top"> 
+        <h4 class="blackfont">5333.50</h4>
+        <p class="navbar-left">转速</p>
+      </div>
+      <div class="col-xs-6 content-span-right content-border-top"> 
+        <h4 class="blackfont "> 5333.50</h4>
+        <p class="navbar-right">扭矩</p>
+      </div>
+     
+    </div>
+   </div>
+</div>
+</div>
+
+<!-- jQuery (Bootstrap 的 JavaScript 插件需要引入 jQuery) -->
+<script src="/mobile/app/vender/js/jquery.min.js"></script>
+<script src= "/mobile/app/vender/js/angular.min.js"></script>
+<script src= "/mobile/app/vender/js/bootstrap.min.js"></script>
+</body>
+</html>
+      

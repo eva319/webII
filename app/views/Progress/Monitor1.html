@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ang-app="" lang="en">
+<html  lang="en">
 <head>
 <meta charset="utf-8" />
     <title>主监控</title>
@@ -7,15 +7,15 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimal-ui" />
     <meta name="apple-mobile-web-app-status-bar-style" content="yes" />
-    <link rel="shortcut icon" href="/favicon.png" type="image/x-icon" />
-    <link rel="stylesheet" href = "/vender/css/bootstrap-responsive.css">
-    <link rel="stylesheet" href = "/vender/css/bootstrap.min.css">
-    <link rel="stylesheet" href = "/vender/css/mobile.css">
+    <link rel="shortcut icon" href="../../favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href = "../../vender/css/bootstrap-responsive.css">
+    <link rel="stylesheet" href = "../../vender/css/bootstrap.min.css">
+    <link rel="stylesheet" href = "../../vender/css/mobile.css">
 
 </head>
 
   
-<body ng-controller="userController">
+<body ng-app="" ng-controller="MainMonitorSystemController">
 <div class="container-fluid">
 <div class="top row-fluid">   
   
@@ -40,11 +40,11 @@
   </div>
       </div>
 </div>
-<div class="content">
+<div class="content"  >
   <div class="content-bg">
     <div class="row">
       <div class="col-xs-4">
-        <h2 class="bluefont ">1999</h2>
+        <h2 class="bluefont ">{{bodys.ring_num}}</h2>
         <p class="navbar-left">当前环号</p>
       </div>
       <div class="col-xs-4">
@@ -52,11 +52,11 @@
         <p class="navbar-left">当前状态</p>
       </div>
       <div class="col-xs-4">        
-        <h2 class="bluefont">60<small class="bluefont">min</small></h2>
+        <h2 class="bluefont">60<small ng-class="bluefont">min</small></h2>
         <p class="navbar-left">持续时长</p>
       </div>
       <div class="col-xs-12 content-span content-border-top">
-         上位机时间<span class="navbar-right">2014-05-12 12:35:00</span>
+         上位机时间<span class="navbar-right">{{bodys.time}}</span>
       </div> 
     </div>
   </div>
@@ -66,20 +66,20 @@
    <div class="content-bg">
     <div class="row">
       <div class="col-xs-6"> 
-        <h4 class="blackfont"> 2522.56</h4>
+        <h4 class="blackfont">{{bodys.cutter_torque|number:2}}</h4>
         <p class="navbar-left">刀盘扭矩</p>
       </div>
       <div class="col-xs-6 content-span-right"> 
-        <h4 class="blackfont "> 2522.56</h4>
+        <h4 class="blackfont "> {{bodys.forward_speed|number:1}}</h4>
         <p class="navbar-right">推进速度</p>
       </div>
 
       <div class="col-xs-6 content-border-top"> 
-        <h4 class="blackfont"> 2522.56</h4>
+        <h4 class="blackfont"> {{bodys.cutter_speed|number:2}}</h4>
         <p class="navbar-left">刀盘转速</p>
       </div>
       <div class="col-xs-6 content-span-right content-border-top"> 
-        <h4 class="blackfont "> 2522.56</h4>
+        <h4 class="blackfont "> {{bodys.total_propulsion|number:0}}</h4>
         <p class="navbar-right">总推力</p>
       </div>
     </div>
@@ -90,25 +90,25 @@
    <div class="content-bg content-relative">
     <div class="row">
       <div class="col-xs-6"> 
-        <h4 class="blackfont">5333.50</h4>
+        <h4 class="blackfont">{{bodys.earth_pressure_left_up|number:2}}</h4>
         <p class="navbar-left">左上土压</p>
       </div>
       <div class="col-xs-6 content-span-right"> 
-        <h4 class="blackfont ">5333.50</h4>
+        <h4 class="blackfont ">{{bodys.earth_pressure_right_up|number:2}}</h4>
         <p class="navbar-right">右上土压</p>
       </div>
       
       <div class="col-xs-6 content-border-top"> 
-        <h4 class="blackfont">5333.50</h4>
+        <h4 class="blackfont">{{bodys.earth_pressure_left_down|number:2}}</h4>
         <p class="navbar-left">左下土压</p>
       </div>
       <div class="col-xs-6 content-span-right content-border-top"> 
-        <h4 class="blackfont "> 5333.50</h4>
+        <h4 class="blackfont "> {{bodys.earth_pressure_right_down|number:2}}</h4>
         <p class="navbar-right">右下土压</p>
       </div>
       <div class=" content-center content-absolute-center">
-        <h4 class="blackfont content-data-center"> 5333.50</h4>
-        <p class="content-data-center">右下土压</p>
+        <h4 class="blackfont content-data-center"> {{bodys.earth_pressure_up|number:2}}</h4>
+        <p class="content-data-center">上部土压</p>
       </div> 
     </div>
    </div>
@@ -118,25 +118,25 @@
    <div class="content-bg content-relative">
     <div class="row">
       <div class="col-xs-6"> 
-        <h4 class="blackfont">5333.50</h4>
+        <h4 class="blackfont">{{bodys.earth_pressure_left_up|number:2}}</h4>
         <p class="navbar-left">左上土压</p>
       </div>
       <div class="col-xs-6 content-span-right"> 
-        <h4 class="blackfont ">5333.50</h4>
+        <h4 class="blackfont ">{{bodys.earth_pressure_right_up|number:2}}</h4>
         <p class="navbar-right">右上土压</p>
       </div>
       
       <div class="col-xs-6 content-border-top"> 
-        <h4 class="blackfont">5333.50</h4>
+        <h4 class="blackfont">{{bodys.earth_pressure_left_down|number:2}}</h4>
         <p class="navbar-left">左下土压</p>
       </div>
       <div class="col-xs-6 content-span-right content-border-top"> 
-        <h4 class="blackfont "> 5333.50</h4>
+        <h4 class="blackfont "> {{bodys.earth_pressure_right_down|number:2}}</h4>
         <p class="navbar-right">右下土压</p>
       </div>
       <div class=" content-center content-absolute-center">
-        <h4 class="blackfont content-data-center"> 5333.50</h4>
-        <p class="content-data-center">右下土压</p>
+        <h4 class="blackfont content-data-center"> {{bodys.earth_pressure_up|number:2}}</h4>
+        <p class="content-data-center">上部土压</p>
       </div> 
     </div>
    </div>
@@ -146,20 +146,20 @@
    <div class="content-bg ">
     <div class="row">
       <div class="col-xs-6"> 
-        <h4 class="blackfont">5333.50</h4>
+        <h4 class="blackfont">{{bodys.front_pressure}}</h4>
         <p class="navbar-left">前部压力</p>
       </div>
       <div class="col-xs-6 content-span-right"> 
-        <h4 class="blackfont ">5333.50</h4>
+        <h4 class="blackfont ">{{bodys.tail_pressure}}</h4>
         <p class="navbar-right">后部压力</p>
       </div>
       
       <div class="col-xs-6 content-border-top"> 
-        <h4 class="blackfont">5333.50</h4>
+        <h4 class="blackfont">{{bodys.screw_machine_speed}}</h4>
         <p class="navbar-left">转速</p>
       </div>
       <div class="col-xs-6 content-span-right content-border-top"> 
-        <h4 class="blackfont "> 5333.50</h4>
+        <h4 class="blackfont ">{{bodys.screw_machine_torque|number:0}}</h4>
         <p class="navbar-right">扭矩</p>
       </div>
      
@@ -167,11 +167,9 @@
    </div>
 </div>
 </div>
-
-<!-- jQuery (Bootstrap 的 JavaScript 插件需要引入 jQuery) -->
-<script src="/vender/js/jquery.min.js"></script>
-<script src= "/vender/js/angular.min.js"></script>
-<script src= "/vender/js/bootstrap.min.js"></script>
+<script src= "../../vender/js/angular.min.js"></script>
+<script src= "../../scripts/controllers/MainMonitorSystemController.js"></script>
 </body>
 </html>
+
       

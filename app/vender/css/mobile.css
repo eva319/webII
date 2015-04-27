@@ -1,18 +1,20 @@
 @charset "utf-8";
 /* CSS Document */
- .top{ height: 72px; text-align: center; background: #3498db;}
-.top span{ font-size: 24px; line-height: 72px; color: #fff;}
+ .top{ height: 50px; text-align: center; background: #3498db;}
+.top span{ font-size: 18px; line-height:50px; color: #fff;}
 .mainnav .row-fluid{background: #3498db;    border-top: #8dcdef solid 1px;}
 .mainnav .row-fluid .span3{ text-align: center;}
 .mainnav .row-fluid .onmainnav{ background: #4ea5e0;}
 .mainnav .row-fluid .span3 a{color: #fff;line-height: 40px;}
 .contentnav ul{margin: 0 auto; padding: 0 0;}
 .contentnav ul li,.content-bg{ width: 100%; min-height: 50px; display: block; list-style: none; padding-top: 10px; padding-bottom: 10px; background: #fff; margin-bottom: 5px;}
-.topimg{ padding-top: 18px;}
+.content-bg-a{ width: 100%; min-height: 50px; display: block;  padding-left: 10px; padding-right: 10px;list-style: none;background: #fff; margin-bottom: 5px;}
+.topimg{ padding-top:8px;}
 .content-span{ line-height: 35px;}
 .content-span-center{ line-height: 35px; text-align: center;}
 .bluefont{ color: #3498db}
 .content-border-top{ border-top: #dedede solid 1px;}
+.content-border-right{ border-right: #dedede solid 1px;}
 .content-bg{ padding-left: 10px; padding-right: 10px;}
 .content-span-right{ text-align: right;}
 .content-relative{ position: relative;}
@@ -20,3 +22,6 @@
 .content-data-center{ text-align: center;}
 footer p{ position: fixed;bottom: 0; left: 0; text-align: center; width: 100%; font-size: 12px; color: #999}
 .container-fluid-from{ width: 90%;  height: 320px; position: absolute; left: 5%; top:50%; margin-top: -160px;}
+.textleft{ text-align: left}
+/*环数据*/
+.content-bg-a a.bluebg,.content-bg-a a.ringdata-title:hover{ background:#3498db; color:#fff; text-decoration: none;}
